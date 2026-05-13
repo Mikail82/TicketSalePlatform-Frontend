@@ -1,0 +1,435 @@
+/* Genel Arka Plan - Derin Siyah/Gri */
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  margin: 0;
+}
+
+/* Ana Afiş Görseli */
+.hero-banner {
+  width: 100%;
+  height: 400px;
+  /* Biraz daha uzattık ki afiş kendini göstersin */
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  /* Resim yoksa şık bir koyu arka plan çıkar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 4px solid #38bdf8;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.1) 100%);
+}
+
+/* Admin Resim Yükleme Butonu Tasarımı */
+.admin-upload-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.admin-upload-btn:hover {
+  background: rgba(56, 189, 248, 0.8);
+  /* Üzerine gelince mavi parlar */
+  transform: scale(1.05);
+}
+
+/* --- YENİ YAZI TASARIMLARI (TİPOGRAFİ) --- */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Yazılar arasındaki nefes boşluğu */
+}
+
+/* Üst Başlık (Harbiye Konserleri) */
+.subtitle {
+  font-size: 16px;
+  letter-spacing: 5px;
+  /* Harflerin arasını açtık, premium durması için */
+  color: #38bdf8;
+  /* Mavi renk */
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Ana Sanatçı İsimleri */
+.main-title {
+  font-size: 52px;
+  margin: 0;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  /* Yazının arkasına derinlik gölgesi */
+}
+
+/* & İşareti İçin Özel Tasarım */
+.amp {
+  color: #facc15;
+  /* Sadece & işaretini sarı yaptık, patlasın diye */
+  font-size: 48px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 40px;
+  color: white;
+}
+
+/* Üst İstatistik Paneli */
+.dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: rgba(30, 41, 59, 0.7);
+  padding: 20px;
+  border-bottom: 1px solid #334155;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* Sahne Tasarımı */
+/* --- YENİ PREMIUM SAHNE TASARIMI --- */
+.stage-container {
+  text-align: center;
+  margin: 50px auto 80px auto;
+  width: 70%;
+  position: relative;
+}
+
+/* Sahnenin Kavisli ve Parlak Yüzeyi */
+.stage-curve {
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.15), transparent);
+  border-top: 3px solid #38bdf8;
+  border-radius: 50% / 100% 100% 0 0;
+  /* Gerçekçi bir sahne kavisi (yay şekli) verir */
+  box-shadow: 0 -15px 40px rgba(56, 189, 248, 0.3);
+  /* Yukarıya doğru mavi neon yansıması */
+  position: relative;
+}
+
+/* Sahnenin ortasına ekstra beyaz bir parlama (Spot Işığı Etkisi) */
+.stage-curve::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30%;
+  right: 30%;
+  height: 2px;
+  background: #ffffff;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Havalı ve Geniş Aralıklı Sahne Yazısı */
+.stage-text {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 20px;
+  /* Harflerin arasını ciddi şekilde açarak asil bir hava katar */
+  color: #cbd5e1;
+  text-transform: uppercase;
+  text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+  /* Yazıya derinlik verir */
+}
+
+/* Koltuk Tasarımı */
+/* --- Koltuk Tasarımı --- */
+.seat {
+  width: 50px;
+  /* Koltukları 42'den 50'ye büyüttük */
+  height: 40px;
+  /* Yüksekliği 32'den 40'a çıkardık */
+  margin: 6px;
+  /* Karışık durmasın diye aralarına 6px boşluk koyduk */
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  /* Hafif gölge ekledik */
+}
+
+/* Standart Boş Koltuklar (Canlı Yeşil) */
+.available {
+  background-color: #22c55e;
+  color: #0f172a;
+}
+
+.available:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #22c55e;
+}
+
+/* VIP Boş Koltuklar (Canlı Mor) */
+.vip.available {
+  background-color: #a855f7;
+  color: white;
+}
+
+.vip.available:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #a855f7;
+}
+
+/* Satılmış Koltuklar (Kırmızı) */
+.sold {
+  background-color: #ef4444;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.4;
+  /* Satılanlar daha soluk dursun ki göz yormasın */
+}
+
+/* Tıklanıp Seçilen Koltuk (Parlak Sarı) */
+.selected {
+  background-color: #facc15 !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 20px #facc15 !important;
+  transform: scale(1.15);
+}
+
+/* Alt Aksiyon Paneli (Glassmorphism) */
+.action-panel {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 41, 59, 0.9);
+  padding: 20px 40px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.btn-buy {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- YENİ SEPET VE SAYAÇ TASARIMLARI --- */
+
+/* Aksiyon Panelini Biraz Genişlettik */
+.action-panel {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  /* Daha geniş bir panel */
+  max-width: 900px;
+}
+
+/* Neon Sayaç Tasarımı */
+.neon-timer {
+  font-size: 24px;
+  font-weight: 900;
+  color: #22c55e;
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+  background: rgba(34, 197, 94, 0.1);
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+/* Son 1 Dakika Kala Kırmızıya Döner ve Çarpar (Pulse) */
+.neon-timer.danger {
+  color: #ef4444;
+  text-shadow: 0 0 15px rgba(239, 68, 68, 0.9);
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  animation: pulse-danger 1s infinite;
+}
+
+@keyframes pulse-danger {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(239, 68, 68, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* İndirim Kodu Alanı */
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.discount-input-area {
+  display: flex;
+  gap: 8px;
+}
+
+.discount-input {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid #475569;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  outline: none;
+  font-weight: bold;
+}
+
+.discount-input:focus {
+  border-color: #38bdf8;
+}
+
+.btn-apply {
+  background: #475569;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-apply:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* Fiyat Kırılım Ekranı */
+.price-breakdown {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.original-price {
+  font-size: 16px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  /* Üstü çizili eski fiyat */
+}
+
+.discount-amount {
+  font-size: 14px;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.final-price {
+  font-size: 28px;
+  color: #facc15;
+  /* Altın sarısı nihai fiyat */
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(250, 204, 21, 0.4);
+}
+
+/* --- Aksiyon Paneli Kapatma (Çarpı) Butonu --- */
+.btn-close-panel {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #ef4444;
+  color: white;
+  border: 3px solid #0f172a;
+  /* Arka planla uyumlu çerçeve */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.btn-close-panel:hover {
+  transform: scale(1.15) rotate(90deg);
+  /* Üzerine gelince büyür ve havalı şekilde döner */
+  background: #dc2626;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+}
