@@ -20,7 +20,7 @@ Gelişmiş Koltuk Kategorizasyonu: VIP ve Standart koltuk ayrımı, gerçek zama
 Persistent Data UI: Sayfa yenilense bile seçili tercihleri ve yüklenen görselleri koruyan kullanıcı dostu veri yönetim yapısı.
 
 🛠️ Kullanılan Teknolojiler
-Backend: C# ASP.NET Core 8 Web API, Entity Framework Core.
+Backend: C# ASP.NET Core 10.0 Web API, Entity Framework Core.
 
 Frontend: React.js, Vite, CSS3 (Advanced Animations & Flexbox).
 
