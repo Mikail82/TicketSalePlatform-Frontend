@@ -44,7 +44,7 @@ Advanced Seat Categorization: Distinct VIP and Standard seat types, real-time oc
 Persistent Data UI: A user-centric data structure that maintains selected preferences and uploaded assets even after page refreshes.
 
 🛠️ Tech Stack
-Backend: C# ASP.NET Core 8 Web API, Entity Framework Core.
+Backend: C# ASP.NET Core 10.0 Web API, Entity Framework Core.
 
 Frontend: React.js, Vite, CSS3 (Advanced Animations & Flexbox).
 
